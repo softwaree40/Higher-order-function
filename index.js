@@ -39,17 +39,17 @@ higherOrderFunction("javaScript is the best language!",capitalizeFirstLetter)
 higherOrderFunction("we are back to school",capitalizeFirstLetter)
 //Writting functions that return another functions
 
-// const greeting = function(greet){
+const greeting = function(greet){
 
-//     return function(name){
+    return function(name){
 
-//        console.log(`${greet} ${name}`)
-//        console.log(`${greeting.name}`)
+       console.log(`${greet} ${name}`)
+       console.log(`${greeting.name}`)
 
-//     }
+    }
     
 
-// }
+}
 
 // Using greeting function as arrow function
 
