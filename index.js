@@ -63,3 +63,28 @@ const greetingArrow = greet => name => {
 }
 
 greetingArrow("Welcome")("Wale")
+
+// Using call and apply method 
+const lufthansa = {
+airline: "Lufthansa",
+iataCode: "LH",
+bookings: [],
+
+}
+
+const deltaAirLine = {
+ airline: "delta Airline",
+ iataCode: "H34",
+ bookings: []
+
+}
+
+const book = function (flightNumber,name){
+    console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNumber}`);
+ 
+ }
+
+book.call(deltaAirLine,23456,"Wale Abiodun")
+book.call(lufthansa,231111,"Ajagunna")
+
+
