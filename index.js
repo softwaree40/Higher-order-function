@@ -123,3 +123,15 @@ function school() {
 }
 
 console.log(school())
+// Object litera 
+
+const roboot ={
+   firstName: "John",
+   lastName: "faith",
+   sitDown: function(){
+      console.log('sit down')
+
+   }
+
+}
+roboot.sitDown()
