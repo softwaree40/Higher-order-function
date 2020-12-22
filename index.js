@@ -130,7 +130,7 @@ const roboot ={
    lastName: "faith",
    sitDown: function(){
       console.log('sit down')
-
+      console.log(this.firstName + this.lastName)
    }
 
 }
