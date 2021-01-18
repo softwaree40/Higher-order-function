@@ -157,6 +157,7 @@ arrayOfItems = ["water melon","cape","sweet tea","orange"]
 // }
 // usingMapFun()()
 // filters
+// using filter function to remove the item with specific length
 const newFilterItems = arrayOfItems.filter((item)=>{
   
    if( item.length === 4) {
@@ -166,3 +167,15 @@ const newFilterItems = arrayOfItems.filter((item)=>{
 
 })
 console.log(newFilterItems)
+
+const findFunc =()=>{
+  arrayOfItems.find((item)=>{
+    if(item === 2){
+       return item
+    }
+
+  })
+
+
+}
+console.log(findFunc)
