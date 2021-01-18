@@ -79,31 +79,31 @@ const deltaAirLine = {
 
 }
 //using call method to bind object to a function.Which take the object as arg and list of arg pass to it
-// const book = function (flightNumber,name){
-//     console.log(`${this.name} booked a seat on ${this.airline} flight ${this.iataCode} ${this.flightNumber}`);
-//     this.bookings.push(this.name,this.airline,this.flightNumber,this.iataCode)
-//   console.log(this.bookings)
-//  }
+const book = function (flightNumber,name){
+    console.log(`${this.name} booked a seat on ${this.airline} flight ${this.iataCode} ${this.flightNumber}`);
+    this.bookings.push(this.name,this.airline,this.flightNumber,this.iataCode)
+  console.log(this.bookings)
+ }
 
-// book.call(deltaAirLine,23456,"Wale Abiodun")
-// book.call(lufthansa,231111,"Ajagunna")
+book.call(deltaAirLine,23456,"Wale Abiodun")
+book.call(lufthansa,231111,"Ajagunna")
 
 
-//Apply method take array of argument 
+Apply method take array of argument 
 
-//Binding method
+Binding method
 
-// const addVAT= function(rate){
+const addVAT= function(rate){
 
-//   return function(value){
+  return function(value){
 
-//     console.log(value + value * rate)
+    console.log(value + value * rate)
 
-//   }
+  }
   
 
-// }
-// console.log("check if it run",addVAT(100))
+}
+console.log("check if it run",addVAT(100))
 // immediate invoke function IIFE9
   (()=> console.log("i am okay"))();
   const realName = ()=>{
