@@ -135,7 +135,7 @@ const roboot ={
 
 }
 roboot.sitDown()
-
+// create higher order functions.
 function retrunFun(){
 
            (name)=>{
@@ -145,3 +145,14 @@ function retrunFun(){
 
 }
 retrunFun()("wale")
+
+arrayOfItems = ["water melon","cape","sweet tea","orange"]
+// using map 
+
+const usingMapFun = ()=>{
+
+   arrayOfItems.map((item)=>{
+       return item * 2
+   })
+}
+usingMapFun()()
