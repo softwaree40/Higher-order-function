@@ -89,9 +89,9 @@ book.call(deltaAirLine,23456,"Wale Abiodun")
 book.call(lufthansa,231111,"Ajagunna")
 
 
-Apply method take array of argument 
+//Apply method take array of argument 
 
-Binding method
+//Binding method
 
 const addVAT= function(rate){
 
@@ -135,3 +135,13 @@ const roboot ={
 
 }
 roboot.sitDown()
+
+function retrunFun(){
+
+           (name)=>{
+   return `Hello ${name}`
+
+ }
+
+}
+retrunFun()("wale")
