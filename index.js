@@ -1,187 +1,199 @@
-//  "use strict"
-// // oneWord replace all space
-// const oneWord = function(str){
+// //  "use strict"
+// // // oneWord replace all space
+// // const oneWord = function(str){
 
-//  return str.replace(/ /g,"").toLowerCase();
+// //  return str.replace(/ /g,"").toLowerCase();
 
-// };
-// // upper the first word
-// const upperTheFirstWord = function(str){
+// // };
+// // // upper the first word
+// // const upperTheFirstWord = function(str){
 
-//    // convert the string to array by splitting each of the word
-//    let splitWord = str.split(" ");
-//    // destruction the word into different variable 
-//    const [first,...others] = splitWord;
-//    //convert the first word in that variable (first)to uppercase and join back to string
-//    return [first.toUpperCase(),...others].join(" ");
+// //    // convert the string to array by splitting each of the word
+// //    let splitWord = str.split(" ");
+// //    // destruction the word into different variable 
+// //    const [first,...others] = splitWord;
+// //    //convert the first word in that variable (first)to uppercase and join back to string
+// //    return [first.toUpperCase(),...others].join(" ");
 
-// };
-// const capitalizeFirstLetter = function(str){
-//      let result = []
-//     // split the word example: welcome to school => ["welcome","to","school"]
-//     let splitWordNow = str.split(" ")
-//     for(const eachWord of splitWordNow){
+// // };
+// // const capitalizeFirstLetter = function(str){
+// //      let result = []
+// //     // split the word example: welcome to school => ["welcome","to","school"]
+// //     let splitWordNow = str.split(" ")
+// //     for(const eachWord of splitWordNow){
 
-//        const [firstWord,...others] = eachWord
-//       result.push(firstWord.toUpperCase() + others.join(""))
+// //        const [firstWord,...others] = eachWord
+// //       result.push(firstWord.toUpperCase() + others.join(""))
     
-//     }
-//     return result
-// }
-// // creating higher order function that take the str arg and function
-// const higherOrderFunction = function(str, fx) {
-//   console.log(`This is original string: ${str}`)
-//   console.log(`Transform original string: ${fx(str)}`)
-//   console.log(`What is my function Name: ${fx.name}`)
-//   console.log(`We need use transformer function ${fx(str)}`)
-// }
-// higherOrderFunction("javaScript is the best language!",capitalizeFirstLetter)
-// higherOrderFunction("we are back to school",capitalizeFirstLetter)
-// //Writting functions that return another functions
+// //     }
+// //     return result
+// // }
+// // // creating higher order function that take the str arg and function
+// // const higherOrderFunction = function(str, fx) {
+// //   console.log(`This is original string: ${str}`)
+// //   console.log(`Transform original string: ${fx(str)}`)
+// //   console.log(`What is my function Name: ${fx.name}`)
+// //   console.log(`We need use transformer function ${fx(str)}`)
+// // }
+// // higherOrderFunction("javaScript is the best language!",capitalizeFirstLetter)
+// // higherOrderFunction("we are back to school",capitalizeFirstLetter)
+// // //Writting functions that return another functions
 
-// const greeting = function(greet){
+// // const greeting = function(greet){
 
-//     return function(name){
+// //     return function(name){
 
-//        console.log(`${greet} ${name}`)
-//        console.log(`${greeting.name}`)
+// //        console.log(`${greet} ${name}`)
+// //        console.log(`${greeting.name}`)
 
-//     }
-    
-
-// }
-
-// // Using greeting function as arrow function
-
-// const greetingArrow = greet => name => {
-
-//     return (console.log(`${greet} ${name}`),
-//             console.log(`${greetingArrow.name}`)
-//      )
+// //     }
     
 
-// }
+// // }
 
-// greetingArrow("Welcome")("Wale")
+// // // Using greeting function as arrow function
 
-// // Using call and apply method 
-// const lufthansa = {
-// airline: "Lufthansa",
-// iataCode: "LH",
-// bookings: [],
+// // const greetingArrow = greet => name => {
 
-// }
+// //     return (console.log(`${greet} ${name}`),
+// //             console.log(`${greetingArrow.name}`)
+// //      )
+    
 
-// const deltaAirLine = {
-//  airline: "delta Airline",
-//  iataCode: "H34",
-//  bookings: []
+// // }
 
-// }
-// //using call method to bind object to a function.Which take the object as arg and list of arg pass to it
-// const book = function (flightNumber,name){
-//     console.log(`${this.name} booked a seat on ${this.airline} flight ${this.iataCode} ${this.flightNumber}`);
-//     this.bookings.push(this.name,this.airline,this.flightNumber,this.iataCode)
-//   console.log(this.bookings)
-//  }
+// // greetingArrow("Welcome")("Wale")
 
-// book.call(deltaAirLine,23456,"Wale Abiodun")
-// book.call(lufthansa,231111,"Ajagunna")
+// // // Using call and apply method 
+// // const lufthansa = {
+// // airline: "Lufthansa",
+// // iataCode: "LH",
+// // bookings: [],
+
+// // }
+
+// // const deltaAirLine = {
+// //  airline: "delta Airline",
+// //  iataCode: "H34",
+// //  bookings: []
+
+// // }
+// // //using call method to bind object to a function.Which take the object as arg and list of arg pass to it
+// // const book = function (flightNumber,name){
+// //     console.log(`${this.name} booked a seat on ${this.airline} flight ${this.iataCode} ${this.flightNumber}`);
+// //     this.bookings.push(this.name,this.airline,this.flightNumber,this.iataCode)
+// //   console.log(this.bookings)
+// //  }
+
+// // book.call(deltaAirLine,23456,"Wale Abiodun")
+// // book.call(lufthansa,231111,"Ajagunna")
 
 
-// //Apply method take array of argument 
+// // //Apply method take array of argument 
 
-// //Binding method
+// // //Binding method
 
-// const addVAT= function(rate){
+// // const addVAT= function(rate){
 
-//   return function(value){
+// //   return function(value){
 
-//     console.log(value + value * rate)
+// //     console.log(value + value * rate)
 
-//   }
+// //   }
   
 
-// }
-// console.log("check if it run",addVAT(100))
-// // immediate invoke function IIFE9
-//   (()=> console.log("i am okay"))();
-//   const realName = ()=>{
-//      console.log("We are home")
+// // }
+// // console.log("check if it run",addVAT(100))
+// // // immediate invoke function IIFE9
+// //   (()=> console.log("i am okay"))();
+// //   const realName = ()=>{
+// //      console.log("We are home")
 
 
-//   }
+// //   }
 
-// var array=[1,2,3,4,5];
-// console.log(array.splice(2));
+// // var array=[1,2,3,4,5];
+// // console.log(array.splice(2));
 
-// // function declaration
-// function school() {
+// // // function declaration
+// // function school() {
  
-//    return "i am working to school"
+// //    return "i am working to school"
 
-// }
+// // }
 
-// console.log(school())
-// // Object litera 
+// // console.log(school())
+// // // Object litera 
 
-// const roboot ={
-//    firstName: "John",
-//    lastName: "faith",
-//    sitDown: function(){
-//       console.log('sit down')
-//       console.log(this.firstName + this.lastName)
+// // const roboot ={
+// //    firstName: "John",
+// //    lastName: "faith",
+// //    sitDown: function(){
+// //       console.log('sit down')
+// //       console.log(this.firstName + this.lastName)
+// //    }
+
+// // }
+// // roboot.sitDown()
+// // // create higher order functions.
+// // function retrunFun(){
+
+// //            (name)=>{
+// //    return `Hello ${name}`
+
+// //  }
+
+// // }
+// // retrunFun()("wale")
+
+// arrayOfItems = ["water melon","cape","sweet tea","orange"]
+// // using map 
+
+// // const usingMapFun = ()=>{
+
+// //    arrayOfItems.map((item)=>{
+// //        return item * 2
+// //    })
+// // }
+// // usingMapFun()()
+// // filters
+// // using filter function to remove the item with specific length
+// const newFilterItems = arrayOfItems.filter((item)=>{
+  
+//    if( item.length === 4) {
+
+//       return item
 //    }
 
+// })
+// console.log(newFilterItems)
+
+// const findFunc =()=>{
+//   arrayOfItems.find((item)=>{
+//     if(item === 2){
+//        return item
+//     }
+
+//   })
+
+
 // }
-// roboot.sitDown()
-// // create higher order functions.
-// function retrunFun(){
+// console.log(findFunc)
 
-//            (name)=>{
-//    return `Hello ${name}`
+// setTimeout(()=>{
 
-//  }
+// return "i am okay"
 
-// }
-// retrunFun()("wale")
+// },1000)
 
-arrayOfItems = ["water melon","cape","sweet tea","orange"]
-// using map 
 
-// const usingMapFun = ()=>{
-
-//    arrayOfItems.map((item)=>{
-//        return item * 2
-//    })
-// }
-// usingMapFun()()
-// filters
-// using filter function to remove the item with specific length
-const newFilterItems = arrayOfItems.filter((item)=>{
+function sumUpArray(arr){
+   totalArray = 0
+   for(let i = 0; i < arr.length; i++){
+      totalArray +=arr[i]
   
-   if( item.length === 4) {
-
-      return item
    }
-
-})
-console.log(newFilterItems)
-
-const findFunc =()=>{
-  arrayOfItems.find((item)=>{
-    if(item === 2){
-       return item
-    }
-
-  })
-
-
-}
-console.log(findFunc)
-
-setTimeout(()=>{
-
-return "i am okay"
-
-},1000)
+   return totalArray
+  
+  }
+  sumUpArray[1,2,3,4,5,10,8]
