@@ -179,3 +179,9 @@ const findFunc =()=>{
 
 }
 console.log(findFunc)
+
+setTimeout(()=>{
+
+return "i am okay"
+
+},1000)
